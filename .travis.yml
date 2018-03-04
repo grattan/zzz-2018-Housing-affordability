@@ -56,6 +56,6 @@ deploy:
   overwrite: true
   api_key:
     secure: BcOdse+cwiTuNGEFySRZVMgXYYKVgkPRrRuThtlle+e4x/h3UJ1rm+dIl7I6bRp75dKf6DEhREjBxdZ13gTqMMM44rSdg0HWDKjwV0A+WKqSwRNKw8R88UIfZ+BuHp6EPv97N7JNSQnTXQXbqHG7LrfRSlVGsfad1U158zxqZUF7iCWF6GAkrZWT+uzU/fAuiNRJlOdLI9ukbRFLkchZSy5KknpKWqvjjceZxrrtELFqUT2qaL+klr17YA5F4vDJRT6Q9/hdVMqKaNVIXDqLgvtDwrOspfKEqvJxKjIovjM7yDfF6zFKHCZ2yErHmzd1OPdGyXyKHbu2lJZRGx9I05PfxH07eVXMNEgCOkye5B9aOuWDtvQvx91FrRysw2P290vZOPHYoKnyQaZkZHBKhClr+KPvM6427FfnnWpbvmPXZV3/dEW9XNbIOh1ghr7YZaosJ89q6N7adV1G/brxsE3Rv7RD002Yo6xsieHXiCPd9cuvHWlZOh6LKy4ZYc/3Uv4pR9VtKlgBnKtra+tPtUWXnloaaYKITD9BcdFF1gato1iqMkKkd9uQ+zmRTpsYENtmBy+IMdFpt+ExSGQuvVkKW8sY8M+FzjoJHR1CLV7327eSlT20TzE26PEDbyXMaLH+UvTx5IR/d8Al3tk0m9QhcG9zfAP6K8iFc4Ig1/w=
-  file: RELEASE/*
+  file: Report.pdf
   on:
     repo: grattan/zzz-2018-Housing-affordability
