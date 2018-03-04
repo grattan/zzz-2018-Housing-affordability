@@ -1,0 +1,50 @@
+language: r
+latex: true
+pandoc: false
+sudo: true
+cache:
+- packages
+- "/tmp/texlive"
+- "/$HOME/.texlive"
+warnings_are_errors: false
+
+before_install:
+- source ./travis/texlive.sh
+- sudo apt-get install ghostscript
+- tlmgr install helvetic eurosym xstring csquotes logreq url eso-pic geometry hyperref
+  psnfss colortbl acronym bigfoot blindtext chngcntr cmap nowidow mdframed navigator
+  needspace tablefootnote tocloft xpatch multirow bbding mathastext isomath relsize
+  koma-script carlisle cleveref enumitem footmisc microtype caption booktabs xifthen
+  ifmtarg float adjustbox collectbox l3kernel appendix xkeyval placeins babel-english
+install: echo Installation step
+before_script:
+- wget http://mirrors.ctan.org/biblio/biber/binaries/Linux/biber-linux_x86_64.tar.gz
+- tar xzf biber-linux_x86_64.tar.gz
+- export PATH=$PATH:$PWD
+- tlmgr install dpfloat
+- tlmgr update biber
+- tlmgr update --all
+- Rscript -e 'if (!requireNamespace("hunspell", quietly = TRUE)) system("sudo apt-get install -y r-cran-devtools r-cran-rcpp r-cran-bh r-cran-stringi r-cran-hunspell")'
+- Rscript -e 'install.packages("hutils", quiet = TRUE)'
+- Rscript -e 'devtools::install_github("hughparsonage/TeXCheckR", quiet = TRUE)'
+- Rscript -e 'devtools::install_github("hughparsonage/grattanReporter", quiet = TRUE)'
+script:
+- tlmgr --version
+- set -e
+- touch INCLUDEALL.txt
+- Rscript -e 'tools::find_gs_cmd()'
+- Rscript -e 'library(grattanReporter);options("check.CenturyFootnote" = FALSE);Sys.setenv(R_GSCMD = tools::find_gs_cmd());checkGrattanReport(compile = TRUE, pre_release= TRUE, release = TRUE, .proceed_after_rerun = 4)'
+- Rscript -e 'file.copy(dir(path = "RELEASE", pattern = ".pdf$", full.names = TRUE)[1], "Report.pdf", overwrite = TRUE)'
+notifications:
+  slack: grattex:7yiVyM6NvMmCE49ccxaUX2QG#aust-perspectives
+  on_success: change
+branches:
+  only: master
+deploy:
+  provider: releases
+  skip_cleanup: true
+  api_key:
+    secure: bprbC9+greogYF4Caw88xpMWtpOYEsYq/rU6cTVNtrNSj1//HL+IrXWVD/JTbM0ii2wYCr7TYqtH1qsUq7uQtaztLMSyMCRrFTtnuC9iMphcVgUG7NqWyCb0iCmTfpNNCFfDmBG4minViyBMq7AWBCk0QHbegLwMxnErSZheht2GWnmQ9RH28dWxK90aVfMsqSyfl0KtnmIMaPJ2PkmTExlEjYwgGCXpT3YsOPEzfHmtPlu5DKmE/30q1svn5Xw7By1fW4t9IYY4OT8sIvhLLK5mMkFjKTnORxUipfEe60buCYgEWIxaGLVt3wmk5P6vdVbYXL9mP4FvSkbp62ocTpLLPJ8OEk2m2pZbL61zYC9ug+mCpU+3LgnU6xUOrO9eHoMgEvLHYPVZmNNk8LYgNUZHtR3AOFc6sH1RO3yQqWJu9ge4hpNmngODV/nDudnKvYI/9LDq2r4CxVZGv3iwkdUqeIyKtTtlb18qgt8aDYl0vcUkgMRcRgYc07LjlQzjE9l7p4W9EFzB21pY9vYCUoSWQTn3fqieFjjoQA2ZvsIE6rO+/gtj54+lEYt2kTfv/3GG46aHvMNsZPBQKajvuOypDklmtbVNP+jd/wnq43m0bHerACr0TnYD4Kqw7fZQ3tP3kEIlbfN+/zdN9fO6/rBQwZV0YbJOWi3KDhPPaL8=
+  file: Report.pdf
+  on:
+    repo: grattaninstitute/AP-Housing-affordability-2017

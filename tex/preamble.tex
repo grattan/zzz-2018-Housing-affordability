@@ -1,0 +1,115 @@
+%!TEX root = ../Report.tex
+\usepackage{eurosym}
+
+\providecommand*{\hl}[1]{\textcolor{red}{#1}}
+
+\newcommand{\cellYellow}{\cellcolor{Color1}}
+\newcommand{\cellOrange}{\cellcolor{Color3}}
+\newcommand{\cellDarkOrange}{\cellcolor{Color4}}
+\newcommand{\cellRed}{\cellcolor{Color5}}
+\newcommand{\celltheGrey}{\cellcolor{theGrey!80}}
+
+
+\newenvironment{recommendationsContd}[1][]%
+  {\onecolumn\vtop to 0pt\bgroup\ifstrempty{#1}{\vspace{-24.5pt}}{\vspace{#1}}\chapter*{Recommendations (cont.)}\addtolength{\columnsep}{\recommendationExtra}\begin{multicols}{2}}%
+  {\end{multicols}\addtolength{\columnsep}{-\recommendationExtra}\vss\egroup\hfill\twocolumn}
+
+% pages > 100 make the contents page a bit crammed
+\makeatletter
+\renewcommand{\@pnumwidth}{1.2em}
+\makeatother
+
+\AtEveryBibitem{\clearfield{editor}}
+
+\usepackage{lipsum}
+
+\makeatletter
+\mdfdefinestyle{GrattanFrameBoxA}{%
+    linecolor=Orange,
+    nobreak=true, % prevents page breaking
+    outerlinewidth=0.5pt,
+    innertopmargin=0.5\baselineskip,
+    innerbottommargin=0.5\baselineskip,
+    innerrightmargin=11pt,
+    bottomline=false,
+    innerleftmargin=11pt,
+    backgroundcolor=OrangeBackground
+    }
+\mdfdefinestyle{GrattanFrameBoxB}{%
+    linecolor=Orange,
+    nobreak=true, % prevents page breaking
+    outerlinewidth=0.5pt,
+    innertopmargin=0.5\baselineskip,
+    innerbottommargin=0.5\baselineskip,
+    innerrightmargin=11pt,
+    topline=false,
+    innerleftmargin=11pt,
+    backgroundcolor=OrangeBackground
+    }
+
+\newcommand{\doublepagebigbox}[4]{
+  % \afterpage{\clearpage}
+  \@dblfloat{boxe}%
+  \begin{mdframed}[style=GrattanFrameBoxA]
+
+  \@boxcaption{#1\label{#2}}%
+  % Reduced column sep 
+  \addtolength{\columnsep}{-23.8pt}%
+  \begin{multicols}{2}
+  \setlength{\parskip}{4pt plus 1pt minus 1pt}
+  \RaggedRight
+   #3
+  \end{multicols}\end{mdframed}
+  \end@dblfloat
+  \clearpage
+  \pagecolor{OrangeBackground}
+  \@dblfloat{boxe}
+  \begin{mdframed}[style=GrattanFrameBoxB]
+  \captionsetup{labelfont       = {bf, Orange},
+                font            = {bf, Orange},
+                format          = plain,
+                justification   = raggedright,
+                singlelinecheck = false, 
+                skip            = 0ex, 
+                position        = above}
+  \caption*{Box \ref{#2} (continued): #1}%
+  \captionsetup{format    = plain,
+                font      = {small, bf, theGrey},
+                labelfont = {small, bf, theGrey}, 
+                position  = above, 
+                skip      = 0pt}
+  % Reduced column sep 
+  \addtolength{\columnsep}{-23.8pt}%
+  \begin{multicols}{2}
+  \setlength{\parskip}{4pt plus 1pt minus 1pt}
+  \RaggedRight
+   #4
+  \end{multicols}
+  \end{mdframed}
+  \end@dblfloat 
+  \clearpage\nopagecolor
+
+}
+
+\newenvironment{boxshell}{
+  \@dblfloat{boxe}[p]
+}{
+  \end@dblfloat
+}
+
+\newcounter{crefa}
+\apptocmd{\@cref}{\stepcounter{crefa}\label{crefa@@@#2@@@\thecrefa}\zsavepos{crefa@@@#2@@@\thecrefa}}{}
+
+\makeatother
+\usepackage{dpfloat}
+
+\newcommand{\dummyCaption}[1]{\caption{#1}}  % Gr avoidance
+
+
+
+
+
+
+
+
+

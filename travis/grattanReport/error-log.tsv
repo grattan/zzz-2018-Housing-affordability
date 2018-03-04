@@ -1,0 +1,117 @@
+Time	build_status	error_message
+2017-01-26 01:26:58	Fixed	NA
+2017-01-26 01:27:12	OK	NA
+2017-01-26 10:41:23	Broken	Each field line in .bib must end with a comma (to allow reordering).
+2017-01-26 10:41:37	Still failing	Each field line in .bib must end with a comma (to allow reordering).
+2017-03-04 15:57:20	Still failing	Dash likely masquerading as hyphen. Use -- for a dash.
+2017-03-04 15:58:57	Still failing	Dash likely masquerading as hyphen. Use -- for a dash.
+2017-03-04 17:11:37	Still failing	Dash likely masquerading as hyphen. Use -- for a dash.
+2017-03-04 17:13:29	Still failing	Dash likely masquerading as hyphen. Use -- for a dash.
+2017-03-04 17:13:54	Still failing	Dash likely masquerading as hyphen. Use -- for a dash.
+2017-03-04 17:14:13	Still failing	Dash likely masquerading as hyphen. Use -- for a dash.
+2017-03-04 17:14:31	Still failing	Closing quote used at beginning of word. Use a backtick for an opening quote, e.g. The word `ossifrage' is quoted.
+2017-03-04 17:17:07	Still failing	Closing quote used at beginning of word. Use a backtick for an opening quote, e.g. The word `ossifrage' is quoted.
+2017-03-04 17:17:19	Still failing	Closing quote used at beginning of word. Use a backtick for an opening quote, e.g. The word `ossifrage' is quoted.
+2017-03-04 17:17:35	Still failing	Closing quote used at beginning of word. Use a backtick for an opening quote, e.g. The word `ossifrage' is quoted.
+2017-03-04 17:18:24	Still failing	Closing quote used at beginning of word. Use a backtick for an opening quote, e.g. The word `ossifrage' is quoted.
+2017-03-04 17:19:23	Still failing	\footnote/\footcite cannot occur twice on the same line in the source. Break this sentence up into multiple lines.
+2017-03-04 17:19:58	Still failing	Punctuation after footnotemark.
+2017-03-04 17:20:18	Still failing	Footnote does not end with full stop.
+2017-03-04 17:20:33	Still failing	Footnote does not end with full stop.
+2017-03-04 17:20:56	Still failing	Footnote does not end with full stop.
+2017-03-04 17:32:04	Still failing	Footnote does not end with full stop.
+2017-03-04 17:32:26	Still failing	Footnote does not end with full stop.
+2017-03-04 17:32:44	Still failing	Footnote does not end with full stop.
+2017-03-04 17:32:55	Still failing	Footnote does not end with full stop.
+2017-03-04 17:33:08	Still failing	Footnote does not end with full stop.
+2017-03-04 17:33:21	Still failing	Footnote does not end with full stop.
+2017-03-04 17:33:32	Still failing	Footnote does not end with full stop.
+2017-03-04 17:33:47	Still failing	Footnote does not end with full stop.
+2017-03-04 17:34:50	Still failing	Footnote does not end with full stop.
+2017-03-04 17:34:57	Still failing	Footnote does not end with full stop.
+2017-03-04 17:35:07	Still failing	Capital letter ends sentence, but sentence-ending period mark absent.
+2017-03-04 17:35:28	Still failing	bib/Grattan-Master-Bibliography.bib contains line which is neither a key, nor field, nor closing.
+2017-03-04 17:35:42	Still failing	Use the macros \etc, \ie, and \eg provided for consistent formatting.
+2017-03-04 17:36:00	Still failing	Spellcheck failed: 'www'
+2017-03-04 17:36:19	Still failing	Spellcheck failed: 'disposbale'
+2017-03-04 17:36:40	Still failing	Spellcheck failed: 'LVRs'
+2017-03-04 17:37:26	Still failing	Spellcheck failed: 'LVRs'
+2017-03-04 17:47:48	Still failing	Footnote does not end with full stop.
+2017-03-04 17:48:15	Still failing	Footnote does not end with full stop.
+2017-03-04 17:56:19	Still failing	Footnote does not end with full stop.
+2017-03-04 17:57:06	Still failing	Spellcheck failed: 'BOAML'
+2017-03-04 17:57:57	Still failing	Spellcheck failed: 'CGT'
+2017-03-04 17:58:30	Still failing	Spellcheck failed: 'SGS'
+2017-03-04 17:58:45	Still failing	Spellcheck failed: 'doesn'
+2017-03-04 17:59:07	Still failing	Spellcheck failed: 'FHSAs'
+2017-03-04 17:59:33	Still failing	Spellcheck failed: 'Keystart'
+2017-03-04 17:59:49	Still failing	Spellcheck failed: 'downsizers'
+2017-03-04 18:00:02	Still failing	\label used without prefix.
+2017-03-04 18:00:40	Still failing	\label used without prefix.
+2017-03-04 18:00:57	Still failing	\label used without prefix.
+2017-03-04 18:01:30	Fixed	NA
+2017-03-23 19:52:20	Broken	Working paper / Report inconsistency
+2017-03-23 19:52:58	Still failing	Ellipsis typed without using macro.
+2017-03-23 19:53:25	Still failing	Dash likely masquerading as hyphen. Use -- for a dash.
+2017-03-23 19:54:16	Still failing	Em-dashes not permitted.
+2017-03-23 19:54:29	Still failing	Em-dashes not permitted.
+2017-03-23 19:54:43	Still failing	Closing quote used at beginning of word. Use a backtick for an opening quote, e.g. The word `ossifrage' is quoted.
+2017-03-23 19:54:58	Still failing	Closing quote used at beginning of word. Use a backtick for an opening quote, e.g. The word `ossifrage' is quoted.
+2017-03-23 19:55:15	Still failing	Closing quote used at beginning of word. Use a backtick for an opening quote, e.g. The word `ossifrage' is quoted.
+2017-03-23 19:55:34	Still failing	Closing quote used at beginning of word. Use a backtick for an opening quote, e.g. The word `ossifrage' is quoted.
+2017-03-23 19:55:54	Still failing	\footnote/\footcite cannot occur twice on the same line in the source. Break this sentence up into multiple lines.
+2017-03-23 19:56:07	Still failing	\footnote/\footcite cannot occur twice on the same line in the source. Break this sentence up into multiple lines.
+2017-03-23 19:56:36	Still failing	\footnote/\footcite cannot occur twice on the same line in the source. Break this sentence up into multiple lines.
+2017-03-23 19:56:51	Still failing	\footnote/\footcite cannot occur twice on the same line in the source. Break this sentence up into multiple lines.
+2017-03-23 19:57:05	Still failing	\footnote/\footcite cannot occur twice on the same line in the source. Break this sentence up into multiple lines.
+2017-03-23 19:57:18	Still failing	\footnote/\footcite cannot occur twice on the same line in the source. Break this sentence up into multiple lines.
+2017-03-23 19:57:30	Still failing	\footnote/\footcite cannot occur twice on the same line in the source. Break this sentence up into multiple lines.
+2017-03-23 19:57:54	Still failing	\footnote/\footcite cannot occur twice on the same line in the source. Break this sentence up into multiple lines.
+2017-03-23 19:58:24	Still failing	\footnote/\footcite cannot occur twice on the same line in the source. Break this sentence up into multiple lines.
+2017-03-23 19:58:44	Still failing	\footnote/\footcite cannot occur twice on the same line in the source. Break this sentence up into multiple lines.
+2017-03-23 19:59:10	Still failing	\footnote/\footcite cannot occur twice on the same line in the source. Break this sentence up into multiple lines.
+2017-03-23 19:59:21	Still failing	\footnote/\footcite cannot occur twice on the same line in the source. Break this sentence up into multiple lines.
+2017-03-23 19:59:44	Still failing	\footnote/\footcite cannot occur twice on the same line in the source. Break this sentence up into multiple lines.
+2017-03-23 20:00:10	Still failing	Footnote does not end with full stop.
+2017-03-23 20:00:36	Still failing	Footnote does not end with full stop.
+2017-03-23 20:00:42	Still failing	Footnote does not end with full stop.
+2017-03-23 20:00:55	Still failing	Footnote does not end with full stop.
+2017-03-23 20:01:09	Still failing	Footnote does not end with full stop.
+2017-03-23 20:01:20	Still failing	Footnote does not end with full stop.
+2017-03-23 20:01:54	Still failing	Footnote does not end with full stop.
+2017-03-23 20:02:13	Still failing	Footnote does not end with full stop.
+2017-03-23 20:02:27	Still failing	Footnote does not end with full stop.
+2017-03-23 20:02:35	Still failing	Footnote does not end with full stop.
+2017-03-23 20:02:49	Still failing	Footnote does not end with full stop.
+2017-03-23 20:02:59	Still failing	Footnote does not end with full stop.
+2017-03-23 20:03:21	Still failing	Footnote does not end with full stop.
+2017-03-26 12:30:50	Still failing	Use the macros \etc, \ie, and \eg provided for consistent formatting.
+2017-03-26 12:31:57	Still failing	Use the macros \etc, \ie, and \eg provided for consistent formatting.
+2017-03-26 12:32:15	Still failing	Should be upper case G in government.
+2017-03-26 12:32:38	Still failing	Should be upper case G in government.
+2017-03-26 12:36:32	Still failing	"
+"
+2017-03-26 12:37:25	Still failing	Spellcheck failed: 'Berejiklian'
+2017-03-26 12:39:08	Still failing	Footnote does not end with full stop.
+2017-03-26 12:53:06	Still failing	Spellcheck failed: 'repor'
+2017-03-26 12:53:18	Still failing	Spellcheck failed: 'homeowning'
+2017-03-26 12:53:40	Still failing	Spellcheck failed: 'townhouses'
+2017-03-26 12:53:51	Still failing	Spellcheck failed: 'XXX'
+2017-03-26 12:54:28	Still failing	Spellcheck failed: 'falleb'
+2017-03-26 12:54:41	Still failing	Spellcheck failed: 'tising'
+2017-03-26 12:54:52	Still failing	Spellcheck failed: 'GPOs'
+2017-03-26 12:55:15	Still failing	Spellcheck failed: 'TW'
+2017-03-26 12:55:32	Still failing	Spellcheck failed: 'xx'
+2017-03-26 12:55:53	Still failing	Spellcheck failed: 'yy'
+2017-03-26 12:56:05	Still failing	Spellcheck failed: 'shceme'
+2017-03-26 12:56:29	Still failing	Spellcheck failed: 'HomeStart'
+2017-03-26 12:56:36	Still failing	Spellcheck failed: 'HomesVic'
+2017-03-26 12:56:41	Still failing	Spellcheck failed: 'LVR'
+2017-03-26 12:56:50	Still failing	Spellcheck failed: 'homeownership'
+2017-03-26 12:57:14	Still failing	Spellcheck failed: 'www'
+2017-03-26 12:57:35	Still failing	Missing space between sentence. Likely reason: forgotten space.
+2017-03-26 12:57:53	Still failing	Missing space between sentence. Likely reason: forgotten space.
+2017-03-26 12:58:27	Still failing	Missing space between sentence. Likely reason: forgotten space.
+2017-03-26 12:58:35	Still failing	\label used without prefix.
+2017-03-26 12:58:53	Fixed	NA
+2017-04-28 16:07:39	Broken	Dash likely masquerading as hyphen. Use -- for a dash.
