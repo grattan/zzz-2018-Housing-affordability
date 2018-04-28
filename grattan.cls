@@ -403,6 +403,9 @@ numbers=noenddot,
 
 \newcommand*{\boxsources}[1]{\footnotesize\textit{#1}\@addpunct{.}}
 
+% More consistent fonts for quotes:
+\AtBeginEnvironment{quote}{\small\justifying}
+
 \setkomafont{disposition}{\color{Orange}}
 \addtokomafont{chapter}{\bfseries\Large}
 \addtokomafont{section}{\bfseries\normalsize}
@@ -706,8 +709,6 @@ numbers=noenddot,
 
   \textbf{\textcolor{theGrey}{\normalsize Affiliate Partners}}
 
-  Google 
-
   Medibank Private
 
   Susan McKinnon Foundation
@@ -715,6 +716,8 @@ numbers=noenddot,
   \vspace{15pt}
 
   \textbf{\textcolor{theGrey}{\normalsize Senior Affiliates}}
+ 
+  Google 
 
   Maddocks
 
