@@ -19,11 +19,11 @@ jobs:
             Rscript -e 'devtools::install_github("hughparsonage/grattanReporter", ref = "tinytex-compatible", keep_source = FALSE, quick = TRUE)'
       - run:
           command: |
-            Rscript -e 'devtools::install_github("yihui/tinytex", keep_source = FALSE);library(tinytex);tlmgr_install(c("ifmtarg", "ms", "pgf", "eso-pic", "babel-english", "koma-script", "footmisc", "xifthen", "xcolor", "adjustbox", "collectbox", "float", "placeins", "enumitem", "colortbl", "cleveref", "csquotes", "dvips", "blindtext", "cmap", "nowidow", "mdframed", "needspace", "tablefootnote", "tocloft", "xpatch", "multirow", "bbding", "biblatex", "logreq", "xstring", "biber", "mathastext", "isomath", "relsize"));tlmgr_update();pdflatex("Report.tex")'
+            Rscript -e 'devtools::install_github("yihui/tinytex", keep_source = FALSE, quick=TRUE)'
+            Rscript -e 'library(tinytex);tlmgr_install(c("dpfloat", "ifmtarg", "ms", "pgf", "eso-pic", "babel-english", "koma-script", "footmisc", "xifthen", "xcolor", "adjustbox", "collectbox", "float", "placeins", "enumitem", "colortbl", "cleveref", "csquotes", "dvips", "blindtext", "cmap", "nowidow", "mdframed", "needspace", "tablefootnote", "tocloft", "xpatch", "multirow", "bbding", "biblatex", "logreq", "xstring", "biber", "mathastext", "isomath", "relsize"));tlmgr_update()'
             Rscript -e 'hutils::provide.dir("travis/grattanReport")'
             Rscript -e 'library(grattanReporter);checkGrattanReport(compile = TRUE, pre_release = TRUE)'
       - save_cache:
           key: deps1-{{ .Branch }}-{{ checksum "grattan.cls" }} 
           paths:
             - "/root/.TinyTeX"
-            
