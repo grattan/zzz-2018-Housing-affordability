@@ -25,19 +25,15 @@ before_script:
 - tlmgr update biber
 - tlmgr update --all
 - Rscript -e 'if (!requireNamespace("hunspell", quietly = TRUE)) system("sudo apt-get install -y r-cran-devtools r-cran-rcpp r-cran-bh r-cran-stringi r-cran-hunspell")'
-- Rscript -e 'install.packages("hutils", quiet = TRUE)'
+- Rscript -e 'install.packages(c("hutils", "devtools"), quiet = TRUE)'
 - Rscript -e 'devtools::install_github("hughparsonage/TeXCheckR", quiet = TRUE)'
 - Rscript -e 'devtools::install_github("hughparsonage/grattanReporter", quiet = TRUE)'
 script:
 - tlmgr --version
 - set -e
 - touch INCLUDEALL.txt
-- Rscript -e 'tools::find_gs_cmd()'
 - Rscript -e 'library(grattanReporter);options("check.CenturyFootnote" = FALSE);Sys.setenv(R_GSCMD = tools::find_gs_cmd());checkGrattanReport(compile = TRUE, pre_release= TRUE, release = TRUE, .proceed_after_rerun = 4)'
 - Rscript -e 'file.copy(dir(path = "RELEASE", pattern = ".pdf$", full.names = TRUE)[1], "Report.pdf", overwrite = TRUE)'
-notifications:
-  slack: grattex:7yiVyM6NvMmCE49ccxaUX2QG#aust-perspectives
-  on_success: change
 branches:
   only: master
 deploy:
