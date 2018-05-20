@@ -13,7 +13,11 @@ jobs:
       #       - deps1-{{ .Branch }}
       #       - deps1-
       - run:
-          command: for i in *.tex; do pdflatex -halt-on-error -interaction=nonstopmode $i; done
+          command: |
+            for i in *.tex; do pdflatex -halt-on-error -interaction=nonstopmode $i; done
+            biber 'Report'
+            for i in *.tex; do pdflatex -halt-on-error -interaction=batchmode $i; done
+            for i in *.tex; do pdflatex -halt-on-error -interaction=batchmode $i; done
       # - run:
       #     command: |
       #       Rscript -e 'devtools::install_github("hughparsonage/hutils", keep_source = FALSE, quick = TRUE)'
